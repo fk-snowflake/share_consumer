@@ -1,0 +1,2 @@
+-- Consumer cleanup
+DROP DATABASE SHARED_SALES_DATA;
