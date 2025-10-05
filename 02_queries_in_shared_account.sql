@@ -21,8 +21,7 @@ SHOW TABLES IN SCHEMA PUBLIC;
 SHOW OBJECTS IN SCHEMA PUBLIC;
 
 -- View all objects in the shared database
-SHOW OBJECTS IN DATABASE SALES_SHARED_DB.PUBLIC;
-
+SHOW OBJECTS IN DATABASE SALES_SHARED_DB;
 
 -- Note: Reader accounts don't have compute resources
 -- Provider must create virtual warehouse for them
@@ -30,6 +29,8 @@ CREATE WAREHOUSE READER_WH
     WAREHOUSE_SIZE = 'XSMALL'
     AUTO_SUSPEND = 60;
 
+SHOW WAREHOUSES;
+    
 USE WAREHOUSE READER_WH;
 
 SELECT * FROM PUBLIC.CUSTOMER_ORDERS;
